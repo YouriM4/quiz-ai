@@ -5,6 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   base: '/quiz-ai/',
   plugins: [vue()],
+  base: '/quiz-ai/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
