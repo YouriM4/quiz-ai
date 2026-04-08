@@ -26,6 +26,7 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npx vue-tsc --noEmit && npx vite build
+      - run: cp dist/index.html dist/404.html
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
