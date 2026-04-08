@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz AI</title>
+    <script>
+      // SPA redirect for GitHub Pages
+      // Stores the real path in sessionStorage, then redirects to /quiz-ai/
+      var segmentsToKeep = 1; // /quiz-ai
+      var loc = window.location;
+      sessionStorage.redirect = loc.href;
+      loc.replace(
+        loc.protocol + '//' + loc.hostname + (loc.port ? ':' + loc.port : '') +
+        loc.pathname.split('/').slice(0, 1 + segmentsToKeep).join('/') + '/'
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

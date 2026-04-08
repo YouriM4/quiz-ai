@@ -2,11 +2,21 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/quiz-ai/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <script type="module" crossorigin src="/assets/index-CMC8sQiZ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CaVjOpGo.css">
+    <!-- Handle SPA redirect from 404.html -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/quiz-ai/assets/index-Hthb16qp.js"></script>
+    <link rel="stylesheet" crossorigin href="/quiz-ai/assets/index-CaVjOpGo.css">
   </head>
   <body>
     <div id="app"></div>
